@@ -1,9 +1,19 @@
 import React from 'react';
+import '../App.css'
 import { useState } from 'react';
 import { SendOutlined, PictureOutlined } from '@ant-design/icons';
 import { sendMessage, isTyping } from 'react-chat-engine';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+
 
 const MessageForm = (props) => {
+  
+  
     const [value, setValue] = useState('');
     const { chatId, creds } = props;
   
@@ -53,6 +63,7 @@ const MessageForm = (props) => {
         <button type="submit" className="send-button">
           <SendOutlined className="send-icon" />
         </button>
+        
       </form>
     );
   };
